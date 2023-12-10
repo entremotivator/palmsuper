@@ -6,5 +6,5 @@ dotenv.load_dotenv()
 
 SESSION_HEADERS = {
     "accept": "application/json",
-    "Authorization": f"Bearer {os.getenv('TMDB_API_KEY')}"
+    "Authorization": f"Bearer {os.getenv('PALM_API_KEY')}"
 }
