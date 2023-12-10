@@ -10,7 +10,7 @@ from constants import SESSION_HEADERS
 class RecommendMovies:
     def __init__(self, api_key: str) -> None:
         self.model = palm
-        self.model.configure(api_key=api_key)
+        self.model.configure(api_key=palm_api)
 
         self.session = requests.Session()
         self.session.headers = SESSION_HEADERS
