@@ -1,5 +1,3 @@
-# recommend_movies.py
-
 import os
 import urllib.parse
 import requests
@@ -10,7 +8,7 @@ from constants import SESSION_HEADERS
 class RecommendMovies:
     def __init__(self, api_key: str) -> None:
         self.model = palm
-        self.model.configure(api_key=palm_api)
+        self.model.configure(api_key=api_key)
 
         self.session = requests.Session()
         self.session.headers = SESSION_HEADERS
@@ -59,10 +57,3 @@ class RecommendMovies:
             result.append(res["results"])
 
         return result
-secrets.toml:
-toml
-Copy code
-# secrets.toml
-
-[palm_api]
-key = "your_api_key_here"
